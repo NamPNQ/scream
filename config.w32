@@ -1,0 +1,10 @@
+// $Id: config.w32,v 1.1 2009/02/25 21:11:06 johannes Exp $
+// vim:ft=javascript
+
+ARG_ENABLE("scream", "scream support", "no");
+
+if (PHP_SCREAM != "no") {
+	EXTENSION('scream', 'scream.c');
+	AC_DEFINE('HAVE_SCREAM', 1);
+}
+
